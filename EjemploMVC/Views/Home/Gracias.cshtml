@@ -1,0 +1,24 @@
+﻿@model EjemploMVC.Models.Invitacion
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gracias por responder</title>
+</head>
+<body>
+    <div>
+        <h1>¡Gracias, @Model.Nombre @Model.Apellido!</h1>
+        @if (Model.Vendra == true)
+        {
+            @:Buenisimo que vengas, trae tu propio mate.
+        }
+        else
+        {
+            @:Que pena que no vengas, gracias igual por avisar.
+        }
+    </div>
+    Click <a asp-action="ListaRespuestas">aca</a> para ver quienes vienen.
+</body>
+</html>

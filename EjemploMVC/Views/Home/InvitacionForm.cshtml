@@ -1,0 +1,36 @@
+﻿@model EjemploMVC.Models.Invitacion
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Invitacion</title>
+</head>
+<body>
+    <form asp-action="InvitacionForm" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Nombre">Nombre:</label>
+            <input asp-for="Nombre" />
+        </div>
+        <div>
+            <label asp-for="Apellido">Apellido:</label>
+            <input asp-for="Apellido" />
+        </div>
+        <div>
+            <label asp-for="Telefono">Telefono:</label>
+            <input asp-for="Telefono" />
+        </div>
+        <div>
+            <label>¿Vas a venir?</label>
+            <select asp-for="Vendra">
+                <option value="">Elegi una opción</option>
+                <option value="true">Sip</option>
+                <option value="false">Noup</option>
+            </select>
+        </div>
+        <button type="submit">Enviar respuesta</button>
+    </form>
+</body>
+</html>
